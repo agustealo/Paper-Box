@@ -1,0 +1,27 @@
+// Padding
+ @mixin boxPad(){
+	padding-right: $boxPadding / 2;
+	padding-left: $boxPadding / 2;
+}
+@mixin noPad(){
+	padding-left: unset !important;
+	padding-right: unset !important;
+}
+@mixin noPad-ends(){
+	&>div{
+		&:first-child{padding-left: 0;
+		}
+		&:last-child{padding-right: 0;
+		}
+	}
+}
+@mixin addPad(){
+	padding-left: $containerPadding !important;
+	padding-right: $containerPadding !important;
+}
+@mixin addPad-left(){
+	padding-left: $containerPadding !important;
+}
+@mixin addPad-right(){
+	padding-right: $containerPadding !important;
+}

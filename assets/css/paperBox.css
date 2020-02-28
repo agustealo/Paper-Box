@@ -1,0 +1,359 @@
+/* 
+* Name: Paper Box
+* Aurthor: Agustealo Johnson
+* URI: www.agustealo.com
+* Description: Paper Box is a lightweight grid framework base on the CSS flex-box module.
+* Version: 0.9.10
+* License: GNU General Public License v2 or later
+*/
+/* Padding */
+.noPad {
+  padding-left: unset !important;
+  padding-right: unset !important; }
+
+.addPad {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important; }
+
+.addPad-left {
+  padding-left: 1rem !important; }
+
+.addPad-right {
+  padding-right: 1rem !important; }
+
+.noPad-ends > div:first-child {
+  padding-left: 0; }
+.noPad-ends > div:last-child {
+  padding-right: 0; }
+
+.boxPad > div {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem; }
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* 
+/* Box System
+/* Use to contain and layout the dislpay of the flex-box grid
+*/
+/* boxContainer use to contain the Box layout system */
+.boxContainer {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+/* The Box Layout system */
+/* Start with no-query layout */
+.box-nq-1-12 {
+  position: relative;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%; }
+
+.box-nq-2-12 {
+  position: relative;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%; }
+
+.box-nq-3-12 {
+  position: relative;
+  flex: 0 0 25%;
+  max-width: 25%; }
+
+.box-nq-4-12 {
+  position: relative;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%; }
+
+.box-nq-5-12 {
+  position: relative;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%; }
+
+.box-nq-6-12 {
+  position: relative;
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+.box-nq-7-12 {
+  position: relative;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%; }
+
+.box-nq-8-12 {
+  position: relative;
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%; }
+
+.box-nq-9-12 {
+  position: relative;
+  flex: 0 0 75%;
+  max-width: 75%; }
+
+.box-nq-10-12 {
+  position: relative;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%; }
+
+.box-nq-11-12 {
+  position: relative;
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%; }
+
+.box-nq-12-12 {
+  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+/* Media query for the Box system */
+@media (min-width: 768px) {
+  .box-sm-1-12 {
+    position: relative;
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
+
+  .box-sm-2-12 {
+    position: relative;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
+
+  .box-sm-3-12 {
+    position: relative;
+    flex: 0 0 25%;
+    max-width: 25%; }
+
+  .box-sm-4-12 {
+    position: relative;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
+
+  .box-sm-5-12 {
+    position: relative;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
+
+  .box-sm-6-12 {
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .box-sm-7-12 {
+    position: relative;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
+
+  .box-sm-8-12 {
+    position: relative;
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
+
+  .box-sm-9-12 {
+    position: relative;
+    flex: 0 0 75%;
+    max-width: 75%; }
+
+  .box-sm-10-12 {
+    position: relative;
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
+
+  .box-sm-11-12 {
+    position: relative;
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
+
+  .box-sm-12-12 {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+@media (min-width: 1200) {
+  .box-md-1-12 {
+    position: relative;
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
+
+  .box-md-2-12 {
+    position: relative;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
+
+  .box-md-3-12 {
+    position: relative;
+    flex: 0 0 25%;
+    max-width: 25%; }
+
+  .box-md-4-12 {
+    position: relative;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
+
+  .box-md-5-12 {
+    position: relative;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
+
+  .box-md-6-12 {
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .box-md-7-12 {
+    position: relative;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
+
+  .box-md-8-12 {
+    position: relative;
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
+
+  .box-md-9-12 {
+    position: relative;
+    flex: 0 0 75%;
+    max-width: 75%; }
+
+  .box-md-10-12 {
+    position: relative;
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
+
+  .box-md-11-12 {
+    position: relative;
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
+
+  .box-md-12-12 {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+@media (min-width: 1440) {
+  .box-lg-1-12 {
+    position: relative;
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
+
+  .box-lg-2-12 {
+    position: relative;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
+
+  .box-lg-3-12 {
+    position: relative;
+    flex: 0 0 25%;
+    max-width: 25%; }
+
+  .box-lg-4-12 {
+    position: relative;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
+
+  .box-lg-5-12 {
+    position: relative;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
+
+  .box-lg-6-12 {
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .box-lg-7-12 {
+    position: relative;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
+
+  .box-lg-8-12 {
+    position: relative;
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
+
+  .box-lg-9-12 {
+    position: relative;
+    flex: 0 0 75%;
+    max-width: 75%; }
+
+  .box-lg-10-12 {
+    position: relative;
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
+
+  .box-lg-11-12 {
+    position: relative;
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
+
+  .box-lg-12-12 {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+@media (min-width: 1800) {
+  .box-xl-1-12 {
+    position: relative;
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
+
+  .box-xl-2-12 {
+    position: relative;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
+
+  .box-xl-3-12 {
+    position: relative;
+    flex: 0 0 25%;
+    max-width: 25%; }
+
+  .box-xl-4-12 {
+    position: relative;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
+
+  .box-xl-5-12 {
+    position: relative;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
+
+  .box-xl-6-12 {
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .box-xl-7-12 {
+    position: relative;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
+
+  .box-xl-8-12 {
+    position: relative;
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
+
+  .box-xl-9-12 {
+    position: relative;
+    flex: 0 0 75%;
+    max-width: 75%; }
+
+  .box-xl-10-12 {
+    position: relative;
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
+
+  .box-xl-11-12 {
+    position: relative;
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
+
+  .box-xl-12-12 {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%; } }

@@ -1,0 +1,13 @@
+// Settings
+$boxes:12; // Boxes per boxContainer
+$mediaStart: min-width; // Design pref, "min-width" or "max-width"
+$box-sizing: no; // Include box-sizing for boxes yes or no, should set to "yes" if your root is not set to borderBox
+$wpprSwitchpad: no; // Turn on/off Wrapper spacing feature
+$bxCntSpacing: no; // Turn on/off Box Container spacing feature
+$boxSpacing: no; // Turn on/off Box spacing feature
+$boxPad: no; // Turn on/off Box padding feature
+$boxGap: no;
+$gapSpacing: 1rem;
+$containerPadding: 1rem;
+$boxPadding: 1rem;
+

@@ -1,0 +1,135 @@
+@import "paperBox/paperBox";
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box; // Safari <= 5
+	-moz-box-sizing: border-box; // Firefox <= 19
+	 box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding-top: calc(5rem/2);
+	padding-bottom: calc(5rem/2);
+	text-align: center;
+	background: #DF696B;
+	height: 15rem;
+	color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+	align-items: center;
+}
+
+/* Style the top navigation bar */
+.navbar {
+	overflow: hidden;
+	background-color: darken(#fff, 66%);
+	margin-bottom: 1rem;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar ul {
+	margin: 0;
+	float: right;
+	li{
+	list-style: none;
+	float: left;
+		&.download{
+			background-color:#4572C3;
+		}
+	}
+}
+
+/* Change color on hover */
+.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+/* Content area */
+.content-area{
+	@include noPad();
+}
+
+@include media-size(sm) {
+	.imgMedia, .gapPad{
+		@include boxPad();
+		@include noPad-ends();
+	}
+}
+
+/* Box Padding */
+@include media-size(sm) {
+	.content-area{
+		@include addPad-left();
+	}
+}
+
+.blogSec{
+	background-color: darken(#fff, 5%);
+	padding: 1rem 0.5rem;
+}
+/* Create two columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+	background-color: darken(#fff, 5%);
+	padding: 20px;
+}
+
+/* Main column */
+.main {
+	padding: 20px;
+}
+
+/* Image Media */
+.imgCenter {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	img{		
+		@include center-vertical;
+	}
+	
+}
+
+.imgMedia{
+}
+	img{
+		width: 100%;
+		max-height: 100%;
+		height: auto;
+	}
+
+
+/* Footer */
+.footer {
+	margin-top: 1rem;
+	text-align: center;
+	background-color: darken(#fff, 66%);
+	display: flow-root;
+	color: white;
+	padding: $containerPadding;
+	p{
+		margin: 0;
+	}
+}

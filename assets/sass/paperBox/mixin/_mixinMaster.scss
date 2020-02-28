@@ -1,0 +1,29 @@
+// Center media
+@mixin center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Box Sizing
+@mixin box-sizing($box-sizing:border-box){
+	-webkit-box-sizing: $box-sizing; // Safari <= 5
+	   -moz-box-sizing: $box-sizing; // Firefox <= 19
+		    box-sizing: $box-sizing;
+}
+
+// Wrapper
+@mixin wrapper($wpprpad:$wpprSwitchpad) {
+	$padding:$containerPadding / 2;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@if $wpprpad == yes {
+		padding-left: $padding;
+		padding-right: $padding;
+	}
+}
+
