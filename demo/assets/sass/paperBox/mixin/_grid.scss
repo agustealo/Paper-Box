@@ -1,0 +1,108 @@
+// Mixin for generating the box container
+@mixin boxContainer($bxCntSpc:$bxCntSpacing, $wrap:wrap) {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-wrap: $wrap;
+	@if $wrap == nowrap {
+		-ms-flex-wrap: none;
+	}
+	@else {
+		-ms-flex-wrap: $wrap;
+	}
+	@if $bxCntSpc == yes {
+		padding-left: $gapSpacing;
+		padding-right: $gapSpacing;
+	}
+	
+	
+	flex-wrap: $wrap;
+	-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+			flex-direction: row;
+}
+
+// **************************************
+// Mixin for Generating classes for box size, prefixed by size.
+// Classes are named as such .box-[size]-[box]-[total-columns] e.g. .box-lg-1-12
+//
+// @param {int}		$boxes; Amount of boxes in each box container
+// @param {string}	$size; The name of the size target (e.g. nq, sm, md, lg, xl)
+// **************************************
+@mixin box-layout($media, $boxes) {
+	@for $i from 1 through $boxes {
+		// Calculate the size of each box including padding and margin to prevent breaking grid
+		$box-sizes: percentage($i / $boxes);
+		$box-size: calc( #{$box-sizes} - #{$gapSpacing});
+		$webkitSize: -webkit-calc( #{$box-sizes} - #{$gapSpacing});
+	    $exp-size: expression( #{$box-sizes} - #{$gapSpacing});
+	    $moz-size: -moz-calc( #{$box-sizes} - #{$gapSpacing});
+	    $o-size: -o-calc( #{$box-sizes} - #{$gapSpacing});
+		
+		.box-#{$media}-#{$i}-#{$boxes} {
+			@if $boxPad == yes {
+				padding-right: $boxPadding / 2;
+				padding-left: $boxPadding / 2;
+			}
+				position: relative;
+			@if $boxGap == yes {
+				flex: 0 0 $box-size;
+				max-width: $webkitSize;
+				max-width: $exp-size;
+				max-width: $moz-size;
+				max-width: $o-size;
+				margin-right: $gapSpacing / 2;
+				margin-left: $gapSpacing / 2;
+			}
+			@else {				
+				flex: 0 0 $box-sizes;
+				max-width: $box-sizes;
+			}
+			@if $box-sizing == yes {
+				@include box-sizing();
+			}
+		}
+	}
+}
+
+// **************************************
+// Target specific media device width.
+//
+// Available targets:
+// 'nq' = No query, media 0,
+// 'sm' = small media 768px,
+// 'md' = medium media 1200px,
+// 'lg' = large media 1440px,
+// 'xl' = extra large media 1800px.
+// **************************************
+
+@mixin media-size($media) {
+	@if $media == nq {
+		@media ($mediaStart: 0) {
+			@content;
+		}
+	} @else
+	if $media == sm {
+		@media ($mediaStart: 768px) {
+			@content;
+		}
+	} @else
+	if $media == md {
+		@media ($mediaStart: 1200) {
+			@content;
+		}
+	} @else
+	if $media == lg {
+		@media ($mediaStart: 1440) {
+			@content;
+		}
+	} @else
+	if $media == xl {
+		@media ($mediaStart: 1800) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+/* Padding */
+.noPad{@include noPad();}
+.addPad{@include addPad();}
+.addPad-left{@include addPad-left();}
+.addPad-right{@include addPad-right();}
+.noPad-ends{
+	@include noPad-ends();
+}
+.boxPad{
+	&>div{@include boxPad();}
+}
+
+/* Wrapper */
+.wrapper {
+	@include wrapper();
+}
+
+/* 
+/* Box System
+/* Use to contain and layout the dislpay of the flex-box grid
+*/
+
+/* boxContainer use to contain the Box layout system */
+.boxContainer {
+	@include boxContainer();
+}
+// Print our box system classes
+
+
+/* The Box Layout system */
+/* Start with no-query layout */
+@include box-layout(nq, $boxes);
+
+/* Media query for the Box system */
+@include media-size(sm) {
+	@include box-layout(sm, $boxes);
+}
+
+@include media-size(md) {
+	@include box-layout(md, $boxes);
+}
+
+@include media-size(lg) {
+	@include box-layout(lg, $boxes);
+}
+
+@include media-size(xl) {
+	@include box-layout(xl, $boxes);
+}
